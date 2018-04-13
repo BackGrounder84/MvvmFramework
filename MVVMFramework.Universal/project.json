@@ -1,6 +1,6 @@
 ﻿{
   "dependencies": {
-    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.7",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8",
     "StyleCop.Analyzers": "1.1.0-beta006"
   },
   "frameworks": {
