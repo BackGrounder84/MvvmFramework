@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard2.0\MVVMFramework.Standard.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\MVVMFramework\Common\FilterCollection.cs" Link="Common\FilterCollection.cs" />
+    <Compile Include="..\MVVMFramework\Common\FilterGroupCollection.cs" Link="Common\FilterGroupCollection.cs" />
+    <Compile Include="..\MVVMFramework\Common\IFilterCollection.cs" Link="Common\IFilterCollection.cs" />
+    <Compile Include="..\MVVMFramework\Framework\Command.cs" Link="Framework\Command.cs" />
+    <Compile Include="..\MVVMFramework\Framework\CommandWithParams.cs" Link="Framework\CommandWithParams.cs" />
+    <Compile Include="..\MVVMFramework\GlobalSuppressions.cs" Link="GlobalSuppressions.cs" />
+    <Compile Include="..\MVVMFramework\Model\ObservableModel.cs" Link="Model\ObservableModel.cs" />
+    <Compile Include="..\MVVMFramework\ViewModel\IViewModelBase.cs" Link="ViewModel\IViewModelBase.cs" />
+    <Compile Include="..\MVVMFramework\ViewModel\ViewModelBase.cs" Link="ViewModel\ViewModelBase.cs" />
+    <Compile Include="..\MVVMFramework\ViewProperties\ViewPropertyBase.cs" Link="ViewProperties\ViewPropertyBase.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\MVVMFramework\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="Framework\" />
+    <Folder Include="Common\" />
+    <Folder Include="ViewProperties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta006" />
+  </ItemGroup>
+
+</Project>
