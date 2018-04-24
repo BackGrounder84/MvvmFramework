@@ -24,7 +24,13 @@ namespace MVVMFramework.ViewModel
         /// Initializes the object
         /// </summary>
         /// <param name="obj">The object parameter</param>
+        void Init(object obj = null);
+
+        /// <summary>
+        /// Initializes the object async
+        /// </summary>
+        /// <param name="obj">The object parameter</param>
         /// <returns>Async task</returns>
-        Task Init(object obj = null);
+        Task InitAsync(object obj = null);
     }
 }
