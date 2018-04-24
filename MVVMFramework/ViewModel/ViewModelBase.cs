@@ -29,7 +29,12 @@ namespace MVVMFramework.ViewModel
     public abstract class ViewModelBase : IViewModelBase
     {
         /// <inheritdoc/>
-        public async virtual Task Init(object obj = null)
+        public virtual void Init(object obj = null)
+        {
+        }
+
+        /// <inheritdoc/>
+        public async virtual Task InitAsync(object obj = null)
         {
         }
     }
