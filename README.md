@@ -65,7 +65,7 @@ private void AddCommandAction()
 }
 ````
 ## Usage
-### Initialisation
+### Initialization
 ````
 var vm = new TestViewModel();
 vm.Init();
