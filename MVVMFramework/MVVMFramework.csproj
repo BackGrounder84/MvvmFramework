@@ -57,12 +57,6 @@
     <Compile Include="ViewProperties\ViewPropertyBase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\MyLanguage\Common\Common.csproj">
-      <Project>{da53a299-e06d-4d91-960f-9acf0ddc53c1}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <AdditionalFiles Include="stylecop.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
