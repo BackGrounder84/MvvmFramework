@@ -61,15 +61,21 @@ public override void Init(object obj = null)
 
 private void AddCommandAction()
 {
-    if (!string.IsNullOrEmpty(this.Properties.Name) && !string.IsNullOrEmpty(this.Properties.Surname))
-    {
-        ...
-    }
+    ...
 }
 ````
 ## Usage
+### Initialisation
 ````
-this.vm = new TestViewModel();
-this.vm.Init();
-this.DataContext = this.vm;
+var vm = new TestViewModel();
+vm.Init();
+this.DataContext = vm;
+````
+### Properties
+````
+<TextBox Text="{Binding Properties.Name}"/>
+````
+### Commands
+````
+<Button Content="Add" Command="{Binding Properties.AddCommand}"  />
 ````
