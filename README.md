@@ -71,11 +71,11 @@ var vm = new TestViewModel();
 vm.Init();
 this.DataContext = vm;
 ````
-### Properties
+### Propertiy binding
 ````
 <TextBox Text="{Binding Properties.Name}"/>
 ````
-### Commands
+### Command binding
 ````
 <Button Content="Add" Command="{Binding Properties.AddCommand}"  />
 ````
