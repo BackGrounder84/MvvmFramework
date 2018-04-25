@@ -97,7 +97,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MVVMFramework\MVVMFramework.csproj">
+    <ProjectReference Include="..\..\MVVMFramework\MVVMFramework.csproj">
       <Project>{a0e15986-8915-489d-849b-3bd0eba74f20}</Project>
       <Name>MVVMFramework</Name>
     </ProjectReference>
