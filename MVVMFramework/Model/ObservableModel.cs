@@ -15,26 +15,6 @@ namespace MVVMFramework.Model
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
-        /// Throws only a PropertyChangedEvent changed event
-        /// </summary>
-        /// <typeparam name="T">Type of the property></typeparam>
-        /// <param name="expression">Expression of the property; ()=> this.[PropName]</param>
-        protected void Notify<T>(Expression<Func<T>> expression)
-        {
-            MemberExpression memberExpression = (MemberExpression)expression.Body;
-            this.OnPropertyChanged(memberExpression.Member.Name);
-        }
-
-        /// <summary>
-        /// Throws only a PropertyChangedEvent changed event
-        /// </summary>
-        /// <param name="propName">The property name</param>
-        protected void Notify(string propName)
-        {
-            this.OnPropertyChanged(propName);
-        }
-
-        /// <summary>
         /// Sets a property and throws PropertyChangedEvent event
         /// </summary>
         /// <typeparam name="T">Type of the property</typeparam>
@@ -63,8 +43,30 @@ namespace MVVMFramework.Model
         {
             if (field == null || !field.Equals(value))
             {
+                field = value;
+
                 this.OnPropertyChanged(propName);
             }
+        }
+
+        /// <summary>
+        /// Throws only a PropertyChangedEvent changed event
+        /// </summary>
+        /// <typeparam name="T">Type of the property></typeparam>
+        /// <param name="expression">Expression of the property; ()=> this.[PropName]</param>
+        protected void Notify<T>(Expression<Func<T>> expression)
+        {
+            MemberExpression memberExpression = (MemberExpression)expression.Body;
+            this.OnPropertyChanged(memberExpression.Member.Name);
+        }
+
+        /// <summary>
+        /// Throws only a PropertyChangedEvent changed event
+        /// </summary>
+        /// <param name="propName">The property name</param>
+        protected void Notify(string propName)
+        {
+            this.OnPropertyChanged(propName);
         }
 
         /// <summary>
